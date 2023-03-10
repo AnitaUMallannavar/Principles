@@ -7,8 +7,9 @@ public class Players implements CricketRule{
 	}
 	@Override
 	public int noOfPlayers(int runs) {
-		//this.runs=runs;
+		this.runs=runs;
 		System.out.println("Running number of Players in Players");
+		//this.runs=runs;
 		if(runs!=0&&runs==45) {
 			System.out.println("runs is equals to 45");
 			return 45;
