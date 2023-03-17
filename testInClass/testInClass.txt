@@ -1,0 +1,120 @@
+1.java components are JDK,JRE,JVM:
+JVM: it stands for Java Virtual Machine.
+it can Not exist physically.
+->it is Platform dependent
+the main function of JVM is 1.it verifies the bytecode
+                            2.it loades the bytecode
+							3.it execute the program
+							4.it provied RunTimeEnvironment
+*JRE:it stands for Java RunTime Environment:
+->it exist Physicaly.
+->JRE=JVM+some Set Of libraries.
+->to execut the java program minimum JRE is Requared.
+->it is Platform dependent
+*JDK:it stands for Java Development Kit
+->it exist Physically.
+->JDK=JRE+Developmenttools
+->it is Platform dependent
+							
+
+2.Java featurs:
+1.Simple:java programing language is easy to learn,it syntax are similar to c,it has automatic GarbegeCollection
+2.PlatformIndependent:it write one run anywhere
+3.OOP's:everyThing in java is object
+because object has stats and behavior
+4.Secured:java is highly secured Programming language.
+5.Robost:java has some points like Abstraction,automatic Garbeg collection these all points java make robost.
+
+3.Constructor:
+->it is a Special method.
+->it does not have return Type.
+->it is same as classname.
+->it is used to initialise the instance variables.
+Types of constructur
+1.No Argument constructur(constructur without parameters).
+2.Argument constructur(constructur with parameters).							
+							
+4.Variable:it is used to store the reference in memory location.
+ there are 2 types of Variables
+1.Classlevel Variable 
+2.Methodlevel variables
+classlevel variables are static and non-static variables.
+->static variables are initialised with static keyword,these are also called classlevel variables.
+->static variables are accessed using classname or reference.
+->static variables are declared within class outside the method.
+->non-static variables are accessed using reference.
+->in non-static variables we cannot use static keyword.
+->non-static variables are also called instance variables.
+methodlevel variables are Local & parameter variables.
+->Local variables are need to initialise & declared.
+->parameter variables writen in parameter of methods & constructur.
+
+5.java is not pure Object oriented Programming language Because
+primitiv dataTypes(int,float,char,double,boolean,long,short) does not have states & behavior
+
+7.Oop's :it stands for Object Oriented Programming
+there are 4 principles in java
+1.Polimorphisum
+2.Inheritance
+3.Abstraction
+4.Encapsulation
+*Polimorphisum: poly means many,morphisum means forms.
+it means same name in diffrent forms.
+there are 2 ways to achieve polymorphisum
+1.OverLoading 2.Overriding
+->overLoading also called as compiletime polymorphisum.
+ex=wait().
+->there are 2 types overLoading ,they are constructur overLoading & method overLoading
+->overLoading means same method,constructur only change in the parameters.
+*overriding is also called as Runtime Polymorphisum.
+->in this method name is same & parameters also same only implementation changes
+2.inheritance: it means aquaring the properties from parent class to childclass.
+->to inherit the propertiec we use extends keyword.
+ex=Humanbeing.
+-> the main advantage og inheritance is codereusebility.
+-> there are 5 type of inheritance
+1.single level 2.Multilevel 3.Multiple  4.Hybried Inheritance 5.Hyrarchicle inheritance
+-> multiple & hybried inheritance is not suppoted in java class.
+because of Ambiquity(Confusion).
+*Singlelevel inheritance:1 parent class exteds 1 childClass.
+*multilevel inheritance: 1 parent class extends 1 childClass and then that childclass extends other childClass this is with contineus chain.
+*hyrarchicle inheritance: it is a combination of singlelevel & multilevel inheritance.
+3.Encapsulation: wrapingup of data in single unit.
+->by making all properties private & accessed only by setter and getter method.
+ex=Capsul
+4.Abstraction:it means hiding implementation to user &using only functionality.
+-> to achive abstraction we use abstract keyword.
+-> abstract means incomplete.
+
+
+
+11.Interface 
+-> it is also same as class.
+-> it is used to achiev the Multiple inheritance.
+-> in interface methods does not have any body.
+-> all method and constructur are implecitly static & public only.
+->Interface implecitly many interface.
+->Interface is 100% Abstraction.
+
+12.Exeption:it is a Exeptional events occurs during execution of program & stops the program execution.
+there are 2 types of exeption 1.checked exeption 2.uncheckedExeption
+->checkedExeption means compiler will force to handle or deligat the exeption.
+ex=throwable,exeption.
+->uncheckedExeption means compiler will not force to delegate the exeption.
+ex=error,Runtime exeption.
+hyrarchi of exeption is Throwable is parent most class.
+->sub class of it is Error & exeption.
+-> error & exeption can also have many subclasses.
+->throw is keyword used to create exeption.
+->throws is used to handle the exeption.
+
+13.Access specifiers: these are used for access level of class,variables,methods & constructur.
+there are 4 access specifiers
+1.public   2.private    3.protected   4.packege default
+*public access specifiers can access within packege and outside packege also.
+->we can make class,variables,constructur,methods as public.
+*private access specifiers can access within  that class .
+->we cannot make class as privete.
+*protected access specifiers accesswithin that packege and we can overriding it in other class to use it,by making access specifiers public
+->packege default means we cannot write any  access specifiers then it become packege default.
+->access level is only in within package only.
