@@ -1,16 +1,16 @@
 package com.xworkz.fine.repository;
 
-import com.xworkz.fine.dto.HeadPhoneDTO;
+import com.xworkz.fine.dto.WeaponDTO;
 
-public class HeadPhoneRepositoryImpl implements HeadPhoneRepository {
-	private HeadPhoneDTO[] head = new HeadPhoneDTO[5];
-	private int index = 0;
-
+public class WeaponRepositoryImpl implements WeaponRepository{
+	private WeaponDTO[] weapon=new WeaponDTO[4];
+	private  int index=0;
+	
 	@Override
-	public boolean save(HeadPhoneDTO dto) {
+	public boolean save(WeaponDTO dto) {
 		System.out.println("Running save in HeadPhoneRepositoryImpl" + dto);
-		if (index < head.length) {
-			this.head[index] = dto;
+		if (index < weapon.length) {
+			this.weapon[index] = dto;
 			System.out.println("dto saved at index :" + index + " " + dto);
 			this.index++;
 			return true;

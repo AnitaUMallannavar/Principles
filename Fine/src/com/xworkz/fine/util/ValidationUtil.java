@@ -32,12 +32,8 @@ public class ValidationUtil {
     			  return false;
     		  }
     	  }
-		return false;
-    	  
+		return false;  
       }
-      
-      
-      
       public static boolean validDate(LocalDate args,LocalDate pastDate) {
     	  LocalDate tomorrow=LocalDate.now().plusDays(1);
     	  if(args!=null && args.isBefore(tomorrow)&&args.isAfter(pastDate)) {
@@ -45,5 +41,4 @@ public class ValidationUtil {
     	  }
     	  return false;
       }
-      
 }
