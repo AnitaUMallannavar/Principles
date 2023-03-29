@@ -12,7 +12,7 @@ public class WeaponRunner {
 	public static void main(String[] args) {
 		WeaponDTO weaponDTO = new WeaponDTO(420, "Glock", Type.GUN, 430, "Fiber", "Akshata", "Shubhangi",
 				LocalDate.of(2000, 3, 21), "Anita", "ToKill", 243);
-		WeaponService weaponService = new WeaponServiceImpl();
+		WeaponService weaponService = new WeaponServiceImpl(null);
 		boolean save = weaponService.validateAndThenSave(weaponDTO);
 		System.out.println("Save:" + save);
 

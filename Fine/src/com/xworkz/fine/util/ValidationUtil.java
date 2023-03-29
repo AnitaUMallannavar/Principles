@@ -18,6 +18,12 @@ public class ValidationUtil {
     	  }
     	  return false;
       }
+      public static boolean validId(double id) {
+    	  if(id>0&& id<100000) {
+    		  return true;
+    	  }
+    	  return false;
+      }
       public static boolean validNumber(int no) {
     	  if(no>0&&no<10) {
     		 return true; 

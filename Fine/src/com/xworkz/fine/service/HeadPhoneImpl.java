@@ -17,7 +17,7 @@ public class HeadPhoneImpl implements HeadPhoneService {
 
 	@Override
 	public boolean validateAndThenSave(HeadPhoneDTO dto) {
-		System.out.println("Running validteAndThenSave in HeadPhoneImpl" + dto);
+		System.out.println("Running valideteAndThenSave in HeadPhoneImpl" + dto);
 		if (dto != null) {
 			System.out.println("dto is not null");
 			Brand brand = dto.getBrand();
@@ -78,7 +78,7 @@ public class HeadPhoneImpl implements HeadPhoneService {
 			} else {
 				System.err.println("invalid WarrantyPeriod");
 			}
-			if (validBass) {
+			if (bass) {
 				System.out.println("valid bass");
 				validBass = true;
 			} else {
@@ -110,12 +110,11 @@ public class HeadPhoneImpl implements HeadPhoneService {
 			} else {
 				System.err.println("invalid dto");
 			}
-			
 
 		} else {
 			System.err.println("dto is null");
 		}
-		return true;
+		return false;
 	}
 
 }
