@@ -11,5 +11,4 @@ public enum Sweet {
 	this.price=price;
 	this.colours=colours;
   }
-  
 }

@@ -5,4 +5,8 @@ import com.xworkz.fine.exception.InvalidFestivalException;
 
 public interface FestivalService {
      boolean validateAndThenSave(FestivalDTO dto)throws InvalidFestivalException;
+     
+     default int getTotalSaved() {
+    	 return 0;
+     }
 }

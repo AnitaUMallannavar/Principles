@@ -70,10 +70,17 @@ public class FestivalServiceImpl implements FestivalService {
 			} else {
 				System.err.println("endDate is Invalid");
 			}
-			if (validFlag(validId && validName && validStaetDate && validEndDate && validSweet && validGodName)) {
+			if (validFlag(validId && validName && validStaetDate && validEndDate 
+					&& validSweet && validGodName)) {
 				System.out.println("dto is valid & can be save");
+				boolean exist=this.festivalRepository.isExist(dto);
+				if(!exist) {
 				boolean saved = this.festivalRepository.save(dto);
 				return saved;
+				}
+				else {
+					System.err.println("Data is not Saved");
+				}
 			} else {
 				throw new InvalidFestivalException("data is invalid");
 			}
@@ -82,5 +89,10 @@ public class FestivalServiceImpl implements FestivalService {
 			System.err.println("dto is null");
 		}
 		return false;
+		}
+	@Override
+	public int getTotalSaved() {
+		
+		return festivalRepository.getTotalSaved();
 	}
 }

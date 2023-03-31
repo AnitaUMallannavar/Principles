@@ -131,5 +131,4 @@ public class FestivalDTO implements Serializable {
 	public void setGodName(String godName) {
 		this.godName = godName;
 	}
-    
 }
