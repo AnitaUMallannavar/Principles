@@ -457,20 +457,20 @@ public class EducationRunner {
 		System.out
 				.println(educationService19.findByCandidateNameAndUnivercity("Rajeshwari", "Ranichannamma University"));
 		System.out.println("------------");
-		System.out.println(educationService20.findBacklogByCandidateNameAndDegreeNameAndUnivercity("Rajeshari", "Be",
-				"Ranichennamma University"));
+		System.out.println(educationService20.findBacklogByCandidateNameAndDegreeNameAndUnivercity("Rajeshari", "BCA",
+				"Akkamahadevi University"));
 		System.out.println("------------");
-		System.out.println(educationService20.findBacklogByCandidateNameAndDegreeNameAndUnivercity("Rajeshwari", "Be",
-				"Ranichennamma University"));
-		System.out.println(educationService20.findIdByCandidateNameAndDegreeNameAndUnivercity("Rajeshwari", "Be",
-				"Ranichennamma University"));
+		System.out.println(educationService20.findBacklogByCandidateNameAndDegreeNameAndUnivercity("Rajeshwari", "BCA",
+				"Akkamahadevi University"));
+		System.out.println(educationService20.findIdByCandidateNameAndDegreeNameAndUnivercity("Rajeshwari", "BCA",
+				"Akkamahadevi University"));
 		System.out.println(educationService20.findPercentageByCandidateName("Rajeshwari"));
-		System.out.println(educationService20.findStreamByCandidateNameAndDegreeNameAndUnivercity("Rajeshwari", "Be",
-				"Ranichennamma University"));
+		System.out.println(educationService20.findStreamByCandidateNameAndDegreeNameAndUnivercity("Rajeshwari", "BCA",
+				"Akkamahadevi University"));
 		System.out.println(educationService20.findUnivercityByCandidateName("Rajeshwari"));
 		System.out.println(educationService20.find(educationDTO20));
 		System.out.println(educationService20.findByCandidateNameAndStartDateAndEndDate("Rajeshwari",
-				LocalDate.of(2023, 7, 8), LocalDate.of(2023, 4, 4)));
+				LocalDate.of(2023, 7, 8), LocalDate.of(2023, 8, 7)));
 		System.out
 				.println(educationService20.findByCandidateNameAndUnivercity("Rajeshwari", "Ranichannamma University"));
 		System.out.println("------------");
