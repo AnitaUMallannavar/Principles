@@ -73,8 +73,11 @@ public class AddressServiceImpl implements AddressService {
 			if (validFlag(
 					validStreet && validArea && validCity && validPincode && validFloor && validState && validNumber)) {
 				System.out.println("valid dto");
-				boolean saved = this.addressRepository.save(dto);
-				return saved;
+				boolean exists = this.addressRepository.isExist(dto);
+				if (!exists) {
+					boolean saved = this.addressRepository.save(dto);
+					return saved;
+				}
 			}
 		} else {
 			System.err.println("dto is null");
@@ -114,7 +117,6 @@ public class AddressServiceImpl implements AddressService {
 
 	@Override
 	public int total() {
-
 		return this.addressRepository.total();
 	}
 

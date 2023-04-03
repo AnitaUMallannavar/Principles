@@ -3,7 +3,7 @@ package com.xworkz.fine.repository;
 import com.xworkz.fine.dto.AddressDTO;
 
 public class AddressRepositoryImpl implements AddressRepository {
-	private AddressDTO[] address = new AddressDTO[6];
+	private AddressDTO[] address = new AddressDTO[2];
 	private int index = 0;
 
 	@Override
@@ -36,7 +36,12 @@ public class AddressRepositoryImpl implements AddressRepository {
 
 	@Override
 	public boolean find(AddressDTO dto) {
-		// TODO Auto-generated method stub
+		for(int index=0;index<this.address.length;index++) {
+			AddressDTO ele=this.address[index];
+			if(ele.equals(dto)) {
+				return true;
+			}
+		}
 		return false;
 	}
 
@@ -56,7 +61,8 @@ public class AddressRepositoryImpl implements AddressRepository {
 	public AddressDTO findByNumber(int number) {
 		for (int index3 = 0; index3 < this.address.length; index3++) {
 			AddressDTO ele = this.address[index3];
-			if (ele.getNumber().equals(number)) {
+			//ele!=null &&
+			if ( ele!=null && ele.getNumber().equals(number)) {
 				System.out.println("dto for number:" + number);
 				return ele;
 			}
@@ -68,7 +74,7 @@ public class AddressRepositoryImpl implements AddressRepository {
 	public AddressDTO findBypincode(int pincode) {
 		for (int index4 = 0; index4 < this.address.length; index4++) {
 			AddressDTO ref2 = this.address[index4];
-			if (ref2.getPincoad() == pincode) {
+			if (ref2.getPincoad()==pincode) {
 				System.out.println("dto for Pincode :" + pincode);
 				return ref2;
 			}
@@ -80,9 +86,8 @@ public class AddressRepositoryImpl implements AddressRepository {
 	public AddressDTO findByStreetAndPincoadAndArea(String street, int pincode, String area) {
 		for (int index3 = 0; index3 < this.address.length; index3++) {
 			AddressDTO ref3 = this.address[index3];
-			if (ref3.getStreet().equals(street) && ref3.getPincoad() == pincode && ref3.getArea().equals(area)) {
-				System.out
-						.println("dto for street :" + street + "dto for pincode :" + pincode + "dto for area :" + area);
+			if (ref3!=null && ref3.getStreet().equals(street) && ref3.getPincoad() == pincode && ref3.getArea().equals(area)) {
+				System.out.println("dto for street :" + street + "dto for pincode :" + pincode + "dto for area :" + area);
 				return ref3;
 			}
 		}
@@ -110,7 +115,7 @@ public class AddressRepositoryImpl implements AddressRepository {
 	public int findFloorByNumber(String number) {
 		for (int index5 = 0; index5 < this.address.length; index5++) {
 			AddressDTO ref5 = this.address[index5];
-			if (ref5.getNumber().equals(number)) {
+			if (ref5!=null &&ref5.getNumber().equals(number)) {
 				System.out.println("dto for number :" + number);
 				int floor = ref5.getFloor();
 				return floor;
@@ -123,7 +128,7 @@ public class AddressRepositoryImpl implements AddressRepository {
 	public int findPincodeByNumber(int number) {
 		for (int index6 = 0; index6 < this.address.length; index6++) {
 			AddressDTO ref6 = this.address[index6];
-			if (ref6.getPincoad() == number) {
+			if (ref6!=null && ref6.getPincoad() == number) {
 				System.out.println("dto for number :" + number);
 				int pincode = ref6.getPincoad();
 				return pincode;
@@ -136,7 +141,7 @@ public class AddressRepositoryImpl implements AddressRepository {
 	public String findCityByNumberAndFloorAndStreetAndPincode(int number, int floor, String street, int pincode) {
 		for (int index7 = 0; index7 < this.address.length; index7++) {
 			AddressDTO ref7 = this.address[index7];
-			if (ref7.getNumber().equals(number) && ref7.getFloor() == floor && ref7.getStreet().equals(street)
+			if (ref7!=null &&ref7.getNumber().equals(number) && ref7.getFloor() == floor && ref7.getStreet().equals(street)
 					&& ref7.getPincoad() == pincode) {
 				System.out.println("dto for number :" + number + "dto for floor:" + floor + "dto for street :" + street
 						+ "dto for pincode :" + pincode);
