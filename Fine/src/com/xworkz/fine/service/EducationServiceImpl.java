@@ -3,7 +3,6 @@ package com.xworkz.fine.service;
 import java.time.LocalDate;
 import static com.xworkz.fine.util.EducationValidationUtil.*;
 import com.xworkz.fine.dto.EducationDTO;
-import com.xworkz.fine.exception.EducationMemoryFullExeption;
 import com.xworkz.fine.exception.InvaliedEducationException;
 import com.xworkz.fine.repository.EducationRepository;
 
