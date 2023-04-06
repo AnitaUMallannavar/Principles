@@ -23,14 +23,14 @@ public class DesertRepositoryImpl implements DesertRepository {
 
 	@Override
 	public boolean isExist(DesertDTO dto) {
-		System.out.println("Running isExist method in DesertRepositoryImpl :" + dto);
+		System.out.println("Running isExist method in DesertRepositoryImpl :");
 		if (this.desertIndex == 0) {
 			System.out.println("1st element will not checks");
 			return false;
 		} else {
 			for (int index = 0; index < this.desertDTOs.length; index++) {
 				DesertDTO ele = this.desertDTOs[index];
-				if (ele!=null &&ele.equals(dto)) {
+				if (ele != null && ele.equals(dto)) {
 					System.out.println("Dto cannot be saved as it is dublicated ");
 					return true;
 				}
@@ -65,6 +65,7 @@ public class DesertRepositoryImpl implements DesertRepository {
 
 	@Override
 	public double fineAreaByName(String name) {
+	
 		for (int index = 0; index < this.desertDTOs.length; index++) {
 			DesertDTO ele = this.desertDTOs[index];
 			if (ele != null && ele.getName().equals(name)) {
@@ -84,7 +85,7 @@ public class DesertRepositoryImpl implements DesertRepository {
 					&& ele.getArea() == area) {
 				System.out.println("this name is present :" + name + "[this country is present :" + country
 						+ "[this area is present:" + area);
-                return ele;
+				return ele;
 			}
 		}
 		return null;

@@ -69,7 +69,7 @@ public class EducationRepositoyImpl implements EducationRepository {
 	public EducationDTO findByCandidateNameAndUnivercity(String name, String univercity) {
 		for (int index4 = 0; index4 < this.educationDTO.length; index4++) {
 			EducationDTO ele = this.educationDTO[index4];
-			if (ele.getCandidateName().equals(name) && ele.getUnivercity().equals(univercity)) {
+			if (ele!=null && ele.getCandidateName().equals(name) && ele.getUnivercity().equals(univercity)) {
 				System.out.println("this Name is present :" + name + "this Univercity is present : " + univercity);
 				return ele;
 			}
@@ -96,7 +96,7 @@ public class EducationRepositoyImpl implements EducationRepository {
 	public EducationDTO findByCandidateNameAndStartDateAndEndDate(String name, LocalDate startDate, LocalDate endDate) {
 		for (int index6 = 0; index6 < this.educationDTO.length; index6++) {
 			EducationDTO ele = this.educationDTO[index6];
-			if (ele.getCandidateName().equals(name) && ele.getStartDate().equals(startDate)
+			if ( ele!=null && ele.getCandidateName().equals(name) && ele.getStartDate().equals(startDate)
 					&& ele.getEndDate().equals(endDate)) {
 				System.out.println("name is present :" + name + "startDate is present :" + startDate
 						+ "endDate is present :" + endDate);
@@ -159,7 +159,7 @@ public class EducationRepositoyImpl implements EducationRepository {
 	public String findUnivercityByCandidateName(String candidateName) {
 		for (int index10 = 0; index10 < this.educationDTO.length; index10++) {
 			EducationDTO ele = this.educationDTO[index10];
-			if (ele.getCandidateName().equals(candidateName)) {
+			if (ele!=null && ele.getCandidateName().equals(candidateName)) {
 				System.out.println("candidateName is present :" + candidateName);
 				String ref = ele.getUnivercity();
 				return ref;
