@@ -23,7 +23,7 @@ public class StudentServiceImpl1 implements StudentService1 {
 			int age = dto.getAge();
 			double weight = dto.getWeight();
 			LocalDate dOB = dto.getdOB();
-			boolean validName = false;
+			boolean validName = false;    
 			boolean validAge = false;
 			boolean validDOB = false;
 			boolean validWeight = false;
@@ -74,25 +74,21 @@ public class StudentServiceImpl1 implements StudentService1 {
 	public StudentDTO1 find(StudentDTO1 dto) {
 		return this.studentRepository1.find(dto);
 	}
-
 	@Override
 	public StudentDTO1 findNameByAge(int age) {
-		// TODO Auto-generated method stub
+		
 		return this.studentRepository1.findNameByAge(age);
 	}
-
 	@Override
 	public StudentDTO1 findAgeByName(String name) {
 		// TODO Auto-generated method stub
 		return this.studentRepository1.findAgeByName(name);
 	}
-
 	@Override
 	public StudentDTO1 findWeightByName(String name) {
 		// TODO Auto-generated method stub
 		return this.studentRepository1.findWeightByName(name);
 	}
-
 	@Override
 	public StudentDTO1 findDOBByAge(int age) {
 		// TODO Auto-generated method stub
@@ -104,5 +100,4 @@ public class StudentServiceImpl1 implements StudentService1 {
 		// TODO Auto-generated method stub
 		return this.studentRepository1.getTotal();
 	}
-
 }

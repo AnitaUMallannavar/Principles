@@ -31,8 +31,8 @@ public class StudentValidateUtil {
 	}
 
 	public static boolean validDate(LocalDate date) {
-		LocalDate year = LocalDate.of(2005, 6, 7);
-		if (date != null && date.isBefore(year)) {
+		LocalDate year = LocalDate.now();
+		if (date != null && date.isAfter(year)) {
 			return true;
 		}
 		return false;
